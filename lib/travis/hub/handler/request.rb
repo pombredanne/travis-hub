@@ -1,7 +1,7 @@
 require 'metriks'
 
 module Travis
-  class Hub
+  module Hub
     class Handler
       class Request < Handler
         # Handles request messages which are created by the listener

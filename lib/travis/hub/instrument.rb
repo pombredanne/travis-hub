@@ -1,5 +1,5 @@
 module Travis
-  class Hub
+  module Hub
     class Instrument
       module Handler
         class Request < Travis::Notification::Instrument

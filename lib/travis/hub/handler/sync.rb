@@ -1,7 +1,7 @@
 require 'metriks'
 
 module Travis
-  class Hub
+  module Hub
     class Handler
       class Sync < Handler
         #

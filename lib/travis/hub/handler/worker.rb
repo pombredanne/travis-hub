@@ -1,5 +1,5 @@
 module Travis
-  class Hub
+  module Hub
     class Handler
       # Handles worker status events which are sent by the worker heartbeat.
       class Worker < Handler

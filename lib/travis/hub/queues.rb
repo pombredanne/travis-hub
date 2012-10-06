@@ -1,7 +1,7 @@
 require 'coder'
 
 module Travis
-  class Hub
+  module Hub
     class Queues
       include Logging
 
