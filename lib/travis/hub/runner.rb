@@ -8,7 +8,6 @@ require 'travis'
 require 'travis/support'
 
 require 'travis/hub/handler'
-require 'travis/hub/instrument'
 require 'travis/hub/error'
 require 'travis/hub/queues'
 

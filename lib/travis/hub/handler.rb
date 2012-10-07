@@ -1,3 +1,5 @@
+require 'travis/hub/instrument'
+
 module Travis
   module Hub
     class Handler
