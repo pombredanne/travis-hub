@@ -2,6 +2,8 @@ source :rubygems
 
 ruby '1.9.3', :engine => 'jruby', :engine_version => '1.7.0.RC1'
 
+gem 'thor',               '~> 0.14'
+
 gem 'travis-core',        :github => 'travis-ci/travis-core'
 gem 'travis-support',     :github => 'travis-ci/travis-support'
 
@@ -21,7 +23,7 @@ gem 'activerecord-jdbcpostgresql-adapter', '~> 1.2.2'
 gem 'coder',              :github => 'rkh/coder'
 
 group :test do
-  gem 'rspec',            '~> 2.7.0'
+  gem 'rspec',            '~> 2.11'
   gem 'database_cleaner', '~> 0.8.0'
   gem 'mocha',            '~> 0.10.0'
   gem 'webmock',          '~> 1.8.0'
