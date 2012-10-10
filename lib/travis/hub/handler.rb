@@ -1,5 +1,10 @@
 require 'travis/hub/instrument'
 
+require 'travis/hub/handler/job'
+require 'travis/hub/handler/request'
+require 'travis/hub/handler/sync'
+require 'travis/hub/handler/worker'
+
 module Travis
   module Hub
     class Handler
@@ -50,9 +55,3 @@ module Travis
     end
   end
 end
-
-require 'travis/hub/handler/job'
-require 'travis/hub/handler/request'
-require 'travis/hub/handler/sync'
-require 'travis/hub/handler/worker'
-

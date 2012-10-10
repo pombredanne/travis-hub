@@ -1,5 +1,5 @@
 require 'bundler/setup'
-require 'travis/hub'
+require 'travis/hub/runner'
 
 $stdout.sync = true
 
@@ -12,7 +12,7 @@ module Travis
         desc 'start', 'Consume AMQP messages from the worker'
         def start
           ENV['ENV'] || 'development'
-          # preload_constants!
+          preload_constants!
           Travis::Hub::Runner.start
         end
 
