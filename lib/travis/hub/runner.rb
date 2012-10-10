@@ -13,11 +13,10 @@ require 'travis/hub/queues'
 
 $stdout.sync = true
 
+
 module Travis
   module Hub
     class Runner
-
-      include Logging
 
       class << self
         def start
