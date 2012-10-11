@@ -1,9 +1,11 @@
-require 'metriks'
+require 'travis/hub/handler/common'
 
 module Travis
   module Hub
-    class Handler
-      class Sync < Handler
+    module Handler
+      class Sync
+        include Common
+
         #
         # Handles request messages which are created by the listener
         # when a github event comes in.

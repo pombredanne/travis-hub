@@ -1,6 +1,8 @@
+require 'travis/notification/instrument'
+
 module Travis
   module Hub
-    class Instrument
+    module Instrument
       module Handler
         class Request < Travis::Notification::Instrument
           def handle_received

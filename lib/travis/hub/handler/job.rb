@@ -1,9 +1,13 @@
+require 'travis/hub/handler/common'
+
 module Travis
   module Hub
-    class Handler
+    module Handler
       # Handles updates from test jobs running on the worker, i.e. events
       # like job:test:started, job:test:log and job:test:finished
-      class Job < Handler
+      class Job
+        include Common
+
         def handle
           case event
           when 'job:test:log'

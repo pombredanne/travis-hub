@@ -1,5 +1,3 @@
-require 'travis/hub/instrument'
-
 require 'travis/hub/handler/job'
 require 'travis/hub/handler/request'
 require 'travis/hub/handler/sync'
@@ -7,9 +5,7 @@ require 'travis/hub/handler/worker'
 
 module Travis
   module Hub
-    class Handler
-      include Logging
-      extend  Instrumentation, NewRelic
+    module Handler
 
       class << self
         def handle(event, payload)
@@ -44,13 +40,6 @@ module Travis
             payload['type']
           end
         end
-      end
-
-      attr_accessor :event, :payload
-
-      def initialize(event, payload)
-        @event = event
-        @payload = payload
       end
     end
   end

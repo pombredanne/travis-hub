@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'travis/hub/handler'
 
 describe Travis::Hub::Handler do
   let(:payload) { { :name => 'worker-1', :host => 'ruby-1.worker.travis-ci.org' } }

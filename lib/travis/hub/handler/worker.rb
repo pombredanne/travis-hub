@@ -1,8 +1,12 @@
+require 'travis/hub/handler/common'
+
 module Travis
   module Hub
-    class Handler
+    module Handler
       # Handles worker status events which are sent by the worker heartbeat.
-      class Worker < Handler
+      class Worker
+        include Common
+
         def handle
           # TODO hot compat, remove the next line once all workers send the new payload
           reports = payload.is_a?(Hash) ? payload['workers'] || payload : payload
