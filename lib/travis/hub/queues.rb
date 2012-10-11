@@ -1,3 +1,10 @@
+require 'multi_json'
+require 'benchmark'
+require 'active_support/core_ext/float/rounding'
+require 'travis/support/logging'
+require 'travis/support/amqp'
+require 'travis/hub/handler'
+require 'travis/hub/error'
 require 'coder'
 
 module Travis

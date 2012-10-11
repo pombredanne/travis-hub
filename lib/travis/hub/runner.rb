@@ -1,18 +1,9 @@
-require 'multi_json'
-require 'benchmark'
-require 'active_support/core_ext/float/rounding'
-require 'core_ext/kernel/run_periodically'
-require 'core_ext/hash/compact'
-
 require 'travis'
 require 'travis/support'
-
-require 'travis/hub/handler'
-require 'travis/hub/error'
 require 'travis/hub/queues'
+require 'core_ext/kernel/run_periodically'
 
 $stdout.sync = true
-
 
 module Travis
   module Hub
