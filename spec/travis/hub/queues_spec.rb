@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'travis/hub/queues'
 
 describe Travis::Hub::Queues do
   let(:hub)     { Travis::Hub::Queues.new }
@@ -60,7 +61,7 @@ describe Travis::Hub::Queues do
       end
 
       it 'notifies the error reporter' do
-        Travis::Exceptions::Reporter.expects(:enqueue).with do |exception|
+        Travis::Exceptions.expects(:handle).with do |exception|
           $stdout = STDOUT
           exception.should be_instance_of(Travis::Hub::Error)
           exception.message.should =~ /message/
