@@ -4,7 +4,6 @@ require 'travis'
 require 'travis/hub/queue'
 require 'travis/hub/error'
 require 'core_ext/kernel/run_periodically'
-require 'raven'
 
 $stdout.sync = true
 
@@ -18,7 +17,7 @@ module Travis
       Travis::Database.connect
       Travis::Async::Sidekiq.setup(Travis.config.redis.url, Travis.config.sidekiq)
 
-      Travis::Exceptions::Reporter.start
+      Travis::Exceptions::Reporter.start if Travis.config.sentry
       Travis::Notification.setup
       Travis::Addons.register
 
