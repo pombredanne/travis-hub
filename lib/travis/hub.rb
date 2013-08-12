@@ -17,7 +17,7 @@ module Travis
       Travis::Database.connect
       Travis::Async::Sidekiq.setup(Travis.config.redis.url, Travis.config.sidekiq)
 
-      Travis::Exceptions::Reporter.start if Travis.config.sentry
+      Travis::Exceptions::Reporter.start
       Travis::Notification.setup
       Travis::Addons.register
 
