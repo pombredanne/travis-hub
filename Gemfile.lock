@@ -22,7 +22,8 @@ GIT
 
 GIT
   remote: git://github.com/travis-ci/travis-core.git
-  revision: 0a194c97c857a39c03a5a02eec283e751099d402
+  revision: 89b65f97ef0ffd00dd36ba38645034c8bcc0e250
+  branch: sf-te
   specs:
     travis-core (0.0.1)
       actionmailer (~> 3.2.12)
@@ -33,7 +34,7 @@ GIT
       hashr (~> 0.0.19)
       metriks (~> 0.9.7)
       multi_json
-      pusher (~> 0.11.0)
+      pusher (~> 0.12.0)
       railties (~> 3.2.12)
       rake
       redis (~> 3.0)
@@ -50,19 +51,20 @@ GIT
 
 GIT
   remote: git://github.com/travis-ci/travis-support.git
-  revision: 7c69fe727968b31551ce3acbe0d4f2e0e5bc8fa3
+  revision: 243147664e49a168b0c2d3c40c04a786bf664f37
+  branch: sf-te
   specs:
     travis-support (0.0.1)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    actionmailer (3.2.13)
-      actionpack (= 3.2.13)
-      mail (~> 2.5.3)
-    actionpack (3.2.13)
-      activemodel (= 3.2.13)
-      activesupport (= 3.2.13)
+    actionmailer (3.2.14)
+      actionpack (= 3.2.14)
+      mail (~> 2.5.4)
+    actionpack (3.2.14)
+      activemodel (= 3.2.14)
+      activesupport (= 3.2.14)
       builder (~> 3.0.0)
       erubis (~> 2.7.0)
       journey (~> 1.0.4)
@@ -70,27 +72,26 @@ GEM
       rack-cache (~> 1.2)
       rack-test (~> 0.6.1)
       sprockets (~> 2.2.1)
-    activemodel (3.2.13)
-      activesupport (= 3.2.13)
+    activemodel (3.2.14)
+      activesupport (= 3.2.14)
       builder (~> 3.0.0)
-    activerecord (3.2.13)
-      activemodel (= 3.2.13)
-      activesupport (= 3.2.13)
+    activerecord (3.2.14)
+      activemodel (= 3.2.14)
+      activesupport (= 3.2.14)
       arel (~> 3.0.2)
       tzinfo (~> 0.3.29)
     activerecord-jdbc-adapter (1.2.9)
     activerecord-jdbcpostgresql-adapter (1.2.9)
       activerecord-jdbc-adapter (~> 1.2.9)
       jdbc-postgres (>= 9.1, < 9.3)
-    activesupport (3.2.13)
-      i18n (= 0.6.1)
+    activesupport (3.2.14)
+      i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
     addressable (2.3.5)
     arel (3.0.2)
-    atomic (1.1.10)
-    atomic (1.1.10-java)
+    atomic (1.1.14-java)
     avl_tree (1.1.3)
-    backports (3.3.3)
+    backports (3.3.4)
     bouncy-castle-java (1.5.0147)
     builder (3.0.4)
     celluloid (0.12.4)
@@ -108,12 +109,12 @@ GEM
     diff-lcs (1.1.3)
     erubis (2.7.0)
     facter (1.7.2)
-    faraday (0.8.7)
-      multipart-post (~> 1.1)
+    faraday (0.8.8)
+      multipart-post (~> 1.2.0)
     ffi (1.9.0)
     ffi (1.9.0-java)
     formatador (0.2.4)
-    gh (0.11.3)
+    gh (0.13.0)
       addressable
       backports
       faraday (~> 0.8)
@@ -131,15 +132,14 @@ GEM
     hashie (2.0.5)
     hashr (0.0.22)
     hike (1.2.3)
-    hitimes (1.2.1)
     hitimes (1.2.1-java)
     hot_bunnies (1.4.0-java)
-    i18n (0.6.1)
+    httpclient (2.3.4.1)
+    i18n (0.6.5)
     jdbc-postgres (9.2.1002.1)
     journey (1.0.4)
     jruby-openssl (0.8.8)
       bouncy-castle-java (>= 1.5.0147)
-    json (1.8.0)
     json (1.8.0-java)
     listen (1.2.2)
       rb-fsevent (>= 0.9.3)
@@ -156,12 +156,12 @@ GEM
       avl_tree (~> 1.1.2)
       hitimes (~> 1.1)
     micro_migrations (0.0.1)
-    mime-types (1.23)
+    mime-types (1.25)
     mocha (0.10.5)
       metaclass (~> 0.0.1)
-    multi_json (1.7.7)
+    multi_json (1.8.0)
     multipart-post (1.2.0)
-    net-http-persistent (2.8)
+    net-http-persistent (2.9)
     net-http-pipeline (1.0.1)
     newrelic_rpm (3.4.2.1)
     polyglot (0.3.3)
@@ -174,7 +174,8 @@ GEM
       method_source (~> 0.8)
       slop (~> 3.4)
       spoon (~> 0.0)
-    pusher (0.11.3)
+    pusher (0.12.0)
+      httpclient (~> 2.3.0)
       multi_json (~> 1.0)
       signature (~> 0.1.6)
     rack (1.4.5)
@@ -184,9 +185,9 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
-    railties (3.2.13)
-      actionpack (= 3.2.13)
-      activesupport (= 3.2.13)
+    railties (3.2.14)
+      actionpack (= 3.2.14)
+      activesupport (= 3.2.14)
       rack-ssl (~> 1.3.2)
       rake (>= 0.8.7)
       rdoc (~> 3.4)
@@ -232,7 +233,7 @@ GEM
     thor (0.14.6)
     tilt (1.4.1)
     timers (1.1.0)
-    treetop (1.4.14)
+    treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.37)
